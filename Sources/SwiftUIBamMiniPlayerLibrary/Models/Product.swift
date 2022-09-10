@@ -9,7 +9,7 @@ import Foundation
 
 public struct Product: Identifiable {
     public let id: UUID = UUID()
-    let sku: String
-    let title: String
-    let url: String
+    public let sku: String
+    public let title: String
+    public let url: String
 }
