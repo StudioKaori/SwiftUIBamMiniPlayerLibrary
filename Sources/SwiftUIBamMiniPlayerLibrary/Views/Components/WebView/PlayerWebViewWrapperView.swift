@@ -26,6 +26,7 @@ struct PlayerWebViewWrapperView: UIViewRepresentable {
         // load local player.html
         guard let path: String = Bundle.main.path(forResource: "player", ofType: "html") else {
             // to do throw error instead of returning error
+            print("webview url path error: \(path)")
             return PlayerWebView.shared.webView
         }
             let localHTMLUrl = URL(fileURLWithPath: path, isDirectory: false)
