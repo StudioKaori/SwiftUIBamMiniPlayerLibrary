@@ -16,13 +16,15 @@ public struct PlayerView: View {
         x: UIScreen.main.bounds.width - miniPlayerWidth/2 - miniPlayerMarginFromEdge,
         y: UIScreen.main.bounds.height - miniPlayerHeight/2 - miniPlayerMarginFromEdge
     )
-    
+
     private let playerUrl: String = "https://demo.bambuser.shop/content/webview-landing-v2.html?mockLiveBambuser=true"
     
     private let miniPlayerPositionLeadingX: CGFloat = miniPlayerMarginFromEdge + miniPlayerWidth/2
     private let miniPlayerPositionLeadingY: CGFloat = miniPlayerMarginFromEdge + miniPlayerHeight/2
     private let miniPlayerPositionTrailingX: CGFloat = UIScreen.main.bounds.width - miniPlayerWidth/2 - miniPlayerMarginFromEdge
     private let miniPlayerPositionTrailingY: CGFloat = UIScreen.main.bounds.height - miniPlayerHeight/2 - miniPlayerMarginFromEdge
+    
+    public init()
     
     
     // MARK: - Body
