@@ -24,7 +24,7 @@ public struct PlayerView: View {
     private let miniPlayerPositionTrailingX: CGFloat = UIScreen.main.bounds.width - miniPlayerWidth/2 - miniPlayerMarginFromEdge
     private let miniPlayerPositionTrailingY: CGFloat = UIScreen.main.bounds.height - miniPlayerHeight/2 - miniPlayerMarginFromEdge
     
-    public init()
+    public init() {}
     
     
     // MARK: - Body
