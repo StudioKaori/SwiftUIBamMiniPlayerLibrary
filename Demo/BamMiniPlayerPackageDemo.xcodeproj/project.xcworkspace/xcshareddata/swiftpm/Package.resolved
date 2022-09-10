@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftuibamminiplayerlibrary",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/StudioKaori/SwiftUIBamMiniPlayerLibrary",
+      "state" : {
+        "branch" : "main",
+        "revision" : "f0769a3ed0c2ec3ccd88d68f8529a208c7346e16"
+      }
+    }
+  ],
+  "version" : 2
+}
