@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Product: Identifiable {
-    let id: UUID = UUID()
+public struct Product: Identifiable {
+    public let id: UUID = UUID()
     let sku: String
     let title: String
     let url: String
