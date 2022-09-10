@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				43B8B86528CC7BE6004C7925 /* BamMiniPlayerPackageDemoApp.swift */,
-				43B8B86628CC7BE6004C7925 /* ContentView.swift */,
+				43B8B88628CC80F0004C7925 /* Views */,
 				43B8B86728CC7BE8004C7925 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -78,6 +78,14 @@
 				43B8B87428CC7BE8004C7925 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		43B8B88628CC80F0004C7925 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43B8B86628CC7BE6004C7925 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

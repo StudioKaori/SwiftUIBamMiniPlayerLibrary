@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 13.0, *)
-final class PlayerStatus: ObservableObject {
+public final class PlayerStatus: ObservableObject {
     // MARK: - Properties
     @Published var isPlayerViewVisible: Bool = false
     @Published var isPlayerMinimised: Bool = false

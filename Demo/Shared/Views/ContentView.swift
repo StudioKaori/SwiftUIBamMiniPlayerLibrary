@@ -9,6 +9,11 @@ import SwiftUI
 import SwiftUIBamMiniPlayerLibrary
 
 struct ContentView: View {
+    // MARK: - Properties
+    @StateObject private var playerStatus = PlayerStatus.shared
+    @StateObject private var playerMessageHandler = PlayerMessageHandler.shared
+    
+    // MARK: - Body
     var body: some View {
         Text("Hello, world!")
             .padding()
