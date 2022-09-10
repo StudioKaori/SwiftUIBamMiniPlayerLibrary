@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 13.0, *)
-struct PlayerView: View {
+public struct PlayerView: View {
     // MARK: - Properties
     @StateObject private var playerStatus = PlayerStatus.shared
     
