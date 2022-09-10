@@ -10,8 +10,8 @@ import SwiftUI
 @available(iOS 13.0, *)
 public final class PlayerMessageHandler: ObservableObject {
     // MARK: - Properties
-    @Published var isChildViewVisible: Bool = false
-    @Published var currentProduct: Product = Product(sku: "", title: "", url: "")
+    public @Published var isChildViewVisible: Bool = false
+    public @Published var currentProduct: Product = Product(sku: "", title: "", url: "")
     
     // MARK: - Singleton instance
     public static let shared = PlayerMessageHandler()
