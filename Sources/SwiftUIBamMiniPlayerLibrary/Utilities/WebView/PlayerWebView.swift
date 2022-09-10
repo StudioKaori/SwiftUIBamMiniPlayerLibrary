@@ -8,11 +8,11 @@
 import WebKit
 
 @available(iOS 13.0, *)
-class PlayerWebView {
+public class PlayerWebView {
     let webView: WKWebView = WKWebView(frame: .zero, configuration: WebViewConfig.getConfig())
     
     // MARK: - Singleton instance
-    static let shared = PlayerWebView()
+    public static let shared = PlayerWebView()
     private init() {}
     
     // This function is used to communicate message to the JS

@@ -15,10 +15,34 @@ struct ContentView: View {
     
     // MARK: - Body
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-        
-        PlayerView()
+        ZStack {
+            NavigationView {
+                VStack{
+                    NavigationLink(destination: {
+                        ProductPageView()
+                    }, label: {
+                        Text("Product page")
+                    })
+                    .padding()
+                    
+                    Button(action: {
+                        PlayerWebView.shared.playerOpen(showID: "sXzOW4o0zpDXFIu7zg9S")
+                    }, label: {
+                        Text(playerStatus.isPlayerViewVisible ? "Close the player" : "Open the player")
+                        
+                    })
+                    
+                    NavigationLink(destination: ProductPageView(), isActive: $playerMessageHandler.isChildViewVisible, label: {
+                        EmptyView()
+                    })
+                } //: VStack
+            } //: Navigation View
+            
+            // Player
+            PlayerView()
+
+            
+        } //: Zstack
     }
 }
 

@@ -14,6 +14,8 @@
 		43B8B87928CC7BE8004C7925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B8B86728CC7BE8004C7925 /* Assets.xcassets */; };
 		43B8B87A28CC7BE8004C7925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B8B86728CC7BE8004C7925 /* Assets.xcassets */; };
 		43B8B88528CC7C78004C7925 /* SwiftUIBamMiniPlayerLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 43B8B88428CC7C78004C7925 /* SwiftUIBamMiniPlayerLibrary */; };
+		43B8B88828CC824B004C7925 /* ProductPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B8B88728CC824B004C7925 /* ProductPageView.swift */; };
+		43B8B88928CC824B004C7925 /* ProductPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B8B88728CC824B004C7925 /* ProductPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,7 @@
 		43B8B86C28CC7BE8004C7925 /* BamMiniPlayerPackageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BamMiniPlayerPackageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B8B87228CC7BE8004C7925 /* BamMiniPlayerPackageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BamMiniPlayerPackageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B8B87428CC7BE8004C7925 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		43B8B88728CC824B004C7925 /* ProductPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				43B8B86628CC7BE6004C7925 /* ContentView.swift */,
+				43B8B88728CC824B004C7925 /* ProductPageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B8B88828CC824B004C7925 /* ProductPageView.swift in Sources */,
 				43B8B87728CC7BE8004C7925 /* ContentView.swift in Sources */,
 				43B8B87528CC7BE8004C7925 /* BamMiniPlayerPackageDemoApp.swift in Sources */,
 			);
@@ -201,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B8B88928CC824B004C7925 /* ProductPageView.swift in Sources */,
 				43B8B87828CC7BE8004C7925 /* ContentView.swift in Sources */,
 				43B8B87628CC7BE8004C7925 /* BamMiniPlayerPackageDemoApp.swift in Sources */,
 			);
