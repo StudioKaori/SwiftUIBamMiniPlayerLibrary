@@ -14,7 +14,7 @@ public final class PlayerMessageHandler: ObservableObject {
     @Published var currentProduct: Product = Product(sku: "", title: "", url: "")
     
     // MARK: - Singleton instance
-    static let shared = PlayerMessageHandler()
+    public static let shared = PlayerMessageHandler()
     private init() {}
 }
 
