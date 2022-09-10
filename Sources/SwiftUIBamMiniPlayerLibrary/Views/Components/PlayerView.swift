@@ -26,7 +26,7 @@ public struct PlayerView: View {
     
     
     // MARK: - Body
-    var body: some View {
+    public var body: some View {
         ZStack {
             if (PlayerStatus.shared.isPlayerViewVisible) {
                 //PlayerViewWrapper()
