@@ -1,0 +1,13 @@
+{
+  "data" : [
+    {
+      "filename" : "player.html",
+      "idiom" : "universal",
+      "universal-type-identifier" : "html"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
