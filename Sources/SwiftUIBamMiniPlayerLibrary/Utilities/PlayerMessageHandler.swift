@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 13.0, *)
-final class PlayerMessageHandler: ObservableObject {
+public final class PlayerMessageHandler: ObservableObject {
     // MARK: - Properties
     @Published var isChildViewVisible: Bool = false
     @Published var currentProduct: Product = Product(sku: "", title: "", url: "")
