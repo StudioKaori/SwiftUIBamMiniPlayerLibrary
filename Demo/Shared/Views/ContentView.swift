@@ -43,6 +43,11 @@ struct ContentView: View {
 
             
         } //: Zstack
+        .onAppear(perform: {
+            playerStatus.showID = "sXzOW4o0zpDXFIu7zg9S"
+            playerStatus.isPlayerViewVisible = true
+        })
+
     }
 }
 
