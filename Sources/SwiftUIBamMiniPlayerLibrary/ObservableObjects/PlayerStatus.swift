@@ -15,6 +15,6 @@ public final class PlayerStatus: ObservableObject {
     @Published var showID: String = ""
     
     // MARK: - Singleton instance
-    static let shared = PlayerStatus()
+    public static let shared = PlayerStatus()
     private init() {}
 }
