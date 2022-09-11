@@ -23,14 +23,21 @@ struct PlayerWebViewWrapperView: UIViewRepresentable {
     // Create view instance and returns UIKit view
     func makeUIView(context: Context) -> WKWebView {
                 
+//        // load local player.html
+//        guard let path: String = Bundle.main.path(forResource: "player", ofType: "html") else {
+//            // to do throw error instead of returning error
+//            print("webview url path error: \(path)")
+//            return PlayerWebView.shared.webView
+//        }
+        
         // load local player.html
-        guard let path: String = Bundle.main.path(forResource: "player", ofType: "html") else {
+        guard let path: URL = Bundle.module.url(forResource: "player", withExtension: "html") else {
             // to do throw error instead of returning error
             print("webview url path error: \(path)")
             return PlayerWebView.shared.webView
         }
-            let localHTMLUrl = URL(fileURLWithPath: path, isDirectory: false)
-        PlayerWebView.shared.webView.loadFileURL(localHTMLUrl, allowingReadAccessTo: localHTMLUrl)
+            //let localHTMLUrl = URL(fileURLWithPath: path, isDirectory: false)
+        PlayerWebView.shared.webView.loadFileURL(path, allowingReadAccessTo: path)
   
         
 //        let theFileName = ("player" as NSString).lastPathComponent
