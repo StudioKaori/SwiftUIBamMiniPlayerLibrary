@@ -23,7 +23,7 @@ let package = Package(
             dependencies: [],
             path: "Sources",
             resources: [
-                .process("Resources/Media.xcassets")
+                .process("html/player.html")
             ]),
         .testTarget(
             name: "SwiftUIBamMiniPlayerLibraryTests",
