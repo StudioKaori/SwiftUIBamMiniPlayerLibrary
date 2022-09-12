@@ -36,7 +36,7 @@ struct PlayerWebViewWrapperView: UIViewRepresentable {
             print("webview url path error: \(path)")
             return PlayerWebView.shared.webView
         }
-            //let localHTMLUrl = URL(fileURLWithPath: path, isDirectory: false)
+    //let localHTMLUrl = URL(fileURLWithPath: path, isDirectory: false)
         PlayerWebView.shared.webView.loadFileURL(path, allowingReadAccessTo: path)
   
         

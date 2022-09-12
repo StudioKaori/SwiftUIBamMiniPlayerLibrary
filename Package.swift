@@ -21,9 +21,8 @@ let package = Package(
         .target(
             name: "SwiftUIBamMiniPlayerLibrary",
             dependencies: [],
-            path: "Sources",
             resources: [
-                .copy(Html)
+                .copy("Resources/player.html")
             ]),
         .testTarget(
             name: "SwiftUIBamMiniPlayerLibraryTests",
