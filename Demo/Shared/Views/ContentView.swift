@@ -26,7 +26,7 @@ struct ContentView: View {
                     .padding()
                     
                     Button(action: {
-                        PlayerWebView.shared.playerOpen(showID: "sXzOW4o0zpDXFIu7zg9S")
+                        playerStatus.isPlayerViewVisible ? PlayerWebView.shared.playerClose() :  PlayerWebView.shared.playerOpen(showID: "vAtJH3xevpYTLnf1oHao") 
                     }, label: {
                         Text(playerStatus.isPlayerViewVisible ? "Close the player" : "Open the player")
                         
@@ -43,10 +43,6 @@ struct ContentView: View {
 
             
         } //: Zstack
-        .onAppear(perform: {
-            playerStatus.showID = "sXzOW4o0zpDXFIu7zg9S"
-            playerStatus.isPlayerViewVisible = true
-        })
 
     }
 }
