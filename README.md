@@ -9,6 +9,40 @@ Copy the Github url and load it in your Swift package manager
 
 # Update
 
+#### 2022/09/12 update
+### Cannot load the local html file to the Webview to play the video
+
+To include the local html as available resources, I have added resources to the .target in the package.swift. 
+I found that for Swift package manager, I need to use Bundle.module instead of Bundle.main.
+When I build it, it looked like 
+
+In Package.swift
+```
+    targets: [
+        // Targets are the basic building blocks of a package. A target can define a module or a test suite. 
+        // Targets can depend on other targets in this package, and on products in packages this package depends on.
+        .target(
+            name: "SwiftUIBamMiniPlayerLibrary",
+            dependencies: [],
+            resources: [
+                .copy("Resources/player.html")
+            ]),
+        .testTarget(
+            name: "SwiftUIBamMiniPlayerLibraryTests",
+            dependencies: ["SwiftUIBamMiniPlayerLibrary"]),
+    ]
+```
+
+To use the resources
+```
+let path: URL = Bundle.module.url(forResource: "player", withExtension: "html")
+```
+
+When I build it, path didn't return the url, however, when I anyway build it and became Swift package, it worked well in the demo project.
+
+Later, I will test .process instead of .copy.
+
+
 #### 2022/09/09 update
 ### Created SwiftUIBamMiniPlayerLibrary for Swift package manager 
 The package is made based on [SwiftUIBamMiniPlayer](https://github.com/StudioKaori/SwiftUIBamMiniPlayer)
