@@ -33,7 +33,7 @@ struct PlayerWebViewWrapperView: UIViewRepresentable {
         // load local player.html
         guard let path: URL = Bundle.module.url(forResource: "player", withExtension: "html") else {
             // to do throw error instead of returning error
-            print("webview url path error: \(path)")
+            //print("webview url path error: \(path)")
             return PlayerWebView.shared.webView
         }
     //let localHTMLUrl = URL(fileURLWithPath: path, isDirectory: false)
