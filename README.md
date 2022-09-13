@@ -6,6 +6,76 @@ WebView mini player on Swift UI
 
 Copy the Github url and load it in your Swift package manager
 
+# Usage
+
+### Observable objects
+####PlayerStatus.shared
+PlayerStatus.shared has the following mutable properties. By observing the properties, you can know the player status.
+
+isPlayerViewVisible: Bool
+isPlayerMinimised: Bool
+showID: String
+
+####PlayerMessageHandler.shared
+PlayerStatus.shared has the following mutable properties. By observing the properties, you can manupilate the child view (mainly for the product) and which product is tapped.
+
+isChildViewVisible: Bool
+currentProduct: Product (tapped product on the player)
+
+####Product
+Product has the following properties.
+public let id: UUID = UUID()
+public let sku: String
+public let title: String
+public let url: String
+
+
+Example code:
+
+```
+import SwiftUI
+import SwiftUIBamMiniPlayerLibrary
+
+struct ContentView: View {
+    // MARK: - Properties
+    @StateObject private var playerStatus = PlayerStatus.shared
+    @StateObject private var playerMessageHandler = PlayerMessageHandler.shared
+    
+    // MARK: - Body
+    var body: some View {
+        ZStack {
+            NavigationView {
+                VStack{
+                    NavigationLink(destination: {
+                        ProductPageView()
+                    }, label: {
+                        Text("Product page")
+                    })
+                    .padding()
+                    
+                    Button(action: {
+                        playerStatus.isPlayerViewVisible ? PlayerWebView.shared.playerClose() :  PlayerWebView.shared.playerOpen(showID: "vAtJH3xevpYTLnf1oHao") 
+                    }, label: {
+                        Text(playerStatus.isPlayerViewVisible ? "Close the player" : "Open the player")
+                        
+                    })
+                    
+                    NavigationLink(destination: ProductPageView(), isActive: $playerMessageHandler.isChildViewVisible, label: {
+                        EmptyView()
+                    })
+                } //: VStack
+            } //: Navigation View
+            
+            // Player
+            PlayerView()
+
+            
+        } //: Zstack
+
+    }
+}
+```
+
 
 # Update
 
